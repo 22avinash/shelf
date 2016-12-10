@@ -18,6 +18,9 @@
   ],
   "dependencies": {
     "angular": "^1.5.9",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular-bootstrap": "^2.3.0",
+    "angular-cookies": "^1.6.0"
   }
 }

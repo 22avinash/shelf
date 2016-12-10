@@ -1,0 +1,3 @@
+var EVENTS = {
+	LOGOUT : 'logout'
+};

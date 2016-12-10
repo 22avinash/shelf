@@ -31,37 +31,3 @@ module.exports.getAll = function(req, res) {
 		res.json(users);
 	});
 };
-module.exports.login = function(req, res) {
-	//console.log(req.body);
-	if(req.body.email) {
-		var filter = {
-			email:req.body.email
-		};
-		User.findOne(filter, function(err, user){
-			if(err){
-				throw err;
-				return;
-			}
-			if(!user) {
-				res.json({success:false, message:'User not found!'});
-			} else {
-				if(!req.body.password) {
-					res.json({success: false, message : 'password is required argument'});
-					return;
-				}
-				user.comparePassword(req.body.password, function(err,isMatch){
-					if(err) throw err;
-
-					if(!isMatch) {
-						res.json({ success: false, message: 'Authentication failed. Wrong password.' });
-					} else {
-						var token = jwt.sign(user, config.secret, {
-				    		expiresIn: 60*60*24 // expires in 24 hours
-	        			});
-	        			res.json({success: true, message : 'welcome', token:token});
-					}
-				});
-			}
-		});
-	}
-};

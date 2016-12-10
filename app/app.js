@@ -1,3 +1,6 @@
-function(){
-	var app = angular.module('shelf',[]);
-}();
+
+	var app = angular.module('shelf',[
+		'ui.bootstrap',
+		'ngCookies'
+		]);
+

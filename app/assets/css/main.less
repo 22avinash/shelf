@@ -1,9 +1,48 @@
 @color-white : #ffffff;
+@color-grey : #f8f8f8;
+@color-paper : #f1f1d4;
+@sharp-border : 0px;
+@tagline-font : cursive;
 
 .navbar-white {
-	background-color : @color-white;
-	border-color: @color-white;
+	background-color : @color-grey;
+	border-color: @color-grey;
 	-webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
+    border-radius : @sharp-border;
+}
+
+.clickable {
+	cursor : pointer;
+}
+
+.grey-background {
+	background-color : @color-grey;
+}
+
+.paper-background {
+	background-color : @color-paper;
+}
+
+.shelf-modal {
+	
+}
+.shelf-modal .modal-header {
+	background-color : @color-grey;
+}
+.shelf-modal .modal-body {
+	background-color : #f1f1d4;
+}
+
+.shelf-modal .modal-content{
+	border-radius: @sharp-border;
+}
+
+.sharp-border {
+	border-radius: @sharp-border;
+}
+
+.tagline {
+	font-family: @tagline-font;
 }
